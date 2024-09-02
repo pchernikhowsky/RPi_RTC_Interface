@@ -3,8 +3,8 @@
 ## Description
 
 A Raspberry Pi HAT-style interface board that includes a:
-* [DS3231](https://www.analog.com/en/products/ds3231.html) precision real-time clock (RTC) with replaceable battery backup
-* [DS18B20](https://www.analog.com/en/products/ds18b20.html) temperature sensor
+* [DS3231](https://www.analog.com/en/products/ds3231.html) highly accurate real-time clock (RTC) with replaceable battery backup
+* [DS18B20](https://www.analog.com/en/products/ds18b20.html) precision temperature sensor
 * 3-pin header terminal for access to the serial console (`/dev/ttyS0` a.k.a. `/dev/serial0`) connection
 * Screw-terminal connection for an [I2C interface](https://en.wikipedia.org/wiki/I%C2%B2C) (supports connecting  external devices such as displays, sensors, D/A and A/D converters, etc.)
 * Screw-terminal connection for a [1-Wire interface](https://en.wikipedia.org/wiki/1-Wire) (supports connecting additional DS18B20 temperature sensors and other 1-Wire compatible devices)
