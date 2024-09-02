@@ -3,7 +3,7 @@
 ## Description
 
 A Raspberry Pi HAT-style interface board that includes a:
-* DS3231 real-time clock \(RTC\) with battery backup
+* DS3231 high-precision real-time clock \(RTC\) with battery backup
 * DS18B20 temperature sensor
 * 3-pin header terminal for serial tty connection
 * Screw terminals connections for a I2C interface
