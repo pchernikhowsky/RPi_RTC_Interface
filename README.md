@@ -26,12 +26,14 @@ A 3-pin header connector which provide access to the /dev/ttyS0 is provided.
 
 1. sudo apt-get update
 2. sudo apt-get upgrade
+3. [Configure the kernel and install the necessary RTC packages.](https://pimylifeup.com/raspberry-pi-rtc/)
+4. [Enable the 1 Wire interface.](https://www.circuitbasics.com/raspberry-pi-ds18b20-temperature-sensor-tutorial/)
 
 ## Hardware Construction and Setup
 
 The schematic and PCB are designed in [KiCad 8.0](https://www.kicad.org/).
 
-A full hardware design including [schematic](schematic.pdf) and PCB layout in KiCad format are provided. I ordered my PCBs from [JLCPCB](https://jlcpcb.com/) and parts from DigiKey(https://digikey.com), but feel free to use your preferred vendors. 
+A full hardware design including [schematic](schematic.pdf) and PCB layout in KiCad format are provided. I ordered my PCBs from [JLCPCB](https://jlcpcb.com/) and parts from [DigiKey](https://digikey.com), but feel free to use your preferred vendors. 
 
 For diagnostic purposes, one 3.3V power LED is provided. If the 3.3V power output from the I2C or 1wire interfaces are overloaded or shorted to ground, the 5V to 3.3V LDO regulator will automatically shutdown (and the LED will extinguish). Removing the overload/short will automatically restore the 3.3V power supply.
 
