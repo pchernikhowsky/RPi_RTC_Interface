@@ -21,7 +21,7 @@ Two sets of screw terminals are provided:
 
 For diagnostic purposes, a 3.3V power LED is provided. 
 > [!NOTE]
-> As per the spec for the [onboard 5V to 3.3V LDO](https://www.diodes.com/assets/Datasheets/AP7361EA.pdf), the I2C and 1-Wire interfaces are able to supply up to 1 amp to power connected devices. If the 3.3V power output from the I2C or 1-Wire interfaces are overloaded or shorted to ground (i.e., current draw exceeds 1.5 amps), the LDO regulator will automatically shutdown (and the LED will extinguish). Removing the overload/short will automatically restore the 3.3V power supply.
+> As per the spec for the [onboard 5V to 3.3V LDO](https://www.diodes.com/assets/Datasheets/AP7361EA.pdf), the I2C and 1-Wire interfaces are able to supply up to 1 amp of power to connected devices. If the 3.3V power output from the I2C or 1-Wire interfaces are overloaded or shorted to ground (i.e., current draw exceeds 1.5 amps), the LDO regulator will automatically shutdown (and the LED will extinguish). Removing the overload/short will automatically restore the 3.3V power supply.
 
 A 3-pin header connector with GND, RXD and TXD signals for access to the serial `/dev/ttyS0` device is provided. 
 > [!NOTE]
