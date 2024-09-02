@@ -35,6 +35,11 @@ The schematic and PCB are designed in [KiCad 8.0](https://www.kicad.org/).
 
 A full hardware design including [schematic](schematic.pdf) and PCB layout in KiCad format are provided. I ordered my PCBs from [JLCPCB](https://jlcpcb.com/) and parts from [DigiKey](https://digikey.com), but feel free to use your preferred vendors. 
 
+<p align="center">
+  <img src="PCB_front.jpg" alt="PCB front view"/>
+  <img src="PCB_rear.jpg" alt="PCB read view"/>
+</p>
+
 For diagnostic purposes, one 3.3V power LED is provided. If the 3.3V power output from the I2C or 1wire interfaces are overloaded or shorted to ground, the 5V to 3.3V LDO regulator will automatically shutdown (and the LED will extinguish). Removing the overload/short will automatically restore the 3.3V power supply.
 
 ## Version history
