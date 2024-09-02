@@ -15,27 +15,27 @@ A Raspberry Pi HAT-style interface board that includes:
 ## Hardware
 ### Electrical Interfaces
 
-Two sets of screw terminals are provided:
-1. A four-terminal I2C connector with 3.3V power, SDA, SCL, and ground.
-2. A three-terminal 1-Wire connector with 3.3V power, DQ, and ground.
-
-Pull-ups for the SDA, SCL and DQ signals are provided. An LED indicates that 3.3V power is present at the terminals. 
-
-> [!NOTE]
-> As per the spec for the [onboard 5V to 3.3V LDO](https://www.diodes.com/assets/Datasheets/AP7361EA.pdf), the I2C and 1-Wire interfaces are able to supply up to 1 amp of power to connected devices. If the 3.3V power output from the I2C or 1-Wire interfaces are overloaded or shorted to ground (i.e., current draw exceeds 1.5 amps), the LDO regulator will automatically shutdown (and the 3.3V power LED will extinguish). Removing the overload/short will automatically restore the 3.3V power supply.
-
-A 3-pin 0.1 in. spacing header connector provides access to the `/dev/ttyS0` serial device signals RXD, TXD and GND.
-
-> [!NOTE]
-> * RXD refers to serial data received by (input to) the Pi.
-> * TXD refers to serial data sent from (output from) the Pi.
-
 > [!CAUTION]
-> **The Raspberry Pi uses non-5V tolerant 3.3V GPIO**. This includes the SDA, SCL, DQ and serial port levels. As such, level shifters are required for EIA232 signal compatibility. Many 3.3V to USB interface cables are available for purchase from Amazon, eBay, etc.
+> **The Raspberry Pi uses non-5V tolerant 3.3V GPIO**. This includes the `SDA`, `SCL`, and `DQ` signals and the `RXD` and `TXD` serial port pins. Connecting any of these signals to higher voltages may damage your Raspberry Pi.
+
+Two sets of screw terminals are provided:
+1. A four-terminal I2C connector with 3.3V power, `SDA`, `SCL`, and ground.
+2. A three-terminal 1-Wire connector with 3.3V power, `DQ`, and ground.
+
+Pull-ups for each of the `SDA`, `SCL` and `DQ` signals are provided. An LED indicates that 3.3V power is present at the terminals. 
+
+> [!NOTE]
+> As per the spec for the [onboard 5V to 3.3V LDO](https://www.diodes.com/assets/Datasheets/AP7361EA.pdf), the I2C and 1-Wire interfaces are able to supply up to 1 amp of power to connected devices. If the 3.3V power output from the I2C or 1-Wire interfaces is overloaded or shorted to ground (i.e., current draw exceeds 1.5 amps), the LDO regulator will automatically shutdown and the 3.3V power LED will extinguish. Removing the overload/short will automatically restore the 3.3V power supply.
+
+A 3-pin 0.1 in. spacing header connector provides access to the `/dev/ttyS0` serial device signals `RXD`, `TXD` and `GND`. These are 3.3V level signals and require external level shifters for EIA232 signal compatibility. Many 3.3V to USB interface cables are available for purchase from Amazon, eBay, etc.
+
+> [!NOTE]
+> * `RXD` refers to serial data received by (input to) the Pi.
+> * `TXD` refers to serial data sent from (output from) the Pi.
 
 ### Hardware Construction and Setup
 
-The PCB is designed to mount on any RaspBerry Pi Model A+/B+ or later (i.e., any Pi with the 40 pin expansion connecter). While the PCB conforms to the Pi HAT [physical specification](https://github.com/raspberrypi/hats/blob/master/hat-board-mechanical.pdf) there is no EEPROM for full autoconfiguration. As such, this project does not claim 100% compatibility with the Pi HAT specification. 
+The PCB is designed to mount on any Raspberry Pi Model A+/B+ or later (i.e., any Pi with the 40 pin expansion connecter). While the PCB conforms to the Pi HAT [physical specification](https://github.com/raspberrypi/hats/blob/master/hat-board-mechanical.pdf) there is no EEPROM for full autoconfiguration. As such, this project does not claim 100% compatibility with the Pi HAT specification. 
 
 The schematic and PCB layout were designed using [KiCad 8.0](https://www.kicad.org/). A full hardware design including [schematic](schematic.pdf) and [PCB layout](RPi_RTC_Interface_model.jpg) in KiCad format are provided. If you prefer, the [gerber files](gerbers.zip) can be directly uploaded to most PCB manufacturer sites (avoiding the need to install KiCad).
 
