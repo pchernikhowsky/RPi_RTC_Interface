@@ -7,7 +7,7 @@ A Raspberry Pi HAT-style interface board that includes:
 * [DS18B20](https://www.analog.com/en/products/ds18b20.html) precision temperature sensor
 * 3-pin header terminal for access to the serial console (`/dev/ttyS0` a.k.a. `/dev/serial0`) connection
 * Screw terminals for connecting [I2C](https://en.wikipedia.org/wiki/I%C2%B2C) devices (such as displays, sensors, D/A and A/D converters, etc.)
-* Screw terminals for connecting [1-Wire](https://en.wikipedia.org/wiki/1-Wire) devices (such as additional DS18B20 temperature sensors and other 1-Wire compatible devices)
+* Screw terminals for connecting [1-Wire](https://en.wikipedia.org/wiki/1-Wire) devices (such as additional DS18B20 sensors and other 1-Wire compatible devices)
 <p align="center">
   <img src="Mounted.jpg" alt="Completed hardware"/>
 </p>
