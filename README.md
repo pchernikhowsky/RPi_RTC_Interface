@@ -27,7 +27,7 @@ Pull-ups for each of the `SDA`, `SCL` and `DQ` signals are provided. An LED indi
 > [!NOTE]
 > As per the spec for the [onboard 5V to 3.3V LDO](https://www.diodes.com/assets/Datasheets/AP7361EA.pdf), the I2C and 1-Wire interfaces are able to supply up to 1 amp of power to connected devices. If the 3.3V power output from the I2C or 1-Wire interfaces is overloaded or shorted to ground (i.e., current draw exceeds 1.5 amps), the LDO regulator will automatically shutdown and the 3.3V power LED will extinguish. Removing the overload/short will automatically restore the 3.3V power supply.
 
-A 3-pin 0.1 in. spacing header connector provides access to the `/dev/ttyS0` serial device signals `RXD`, `TXD` and `GND`. These are 3.3V level signals and require external level shifters for EIA232 signal compatibility. Many 3.3V to USB interface cables are available for purchase from Amazon, eBay, etc.
+A 3-pin 0.1 in. spacing header connector provides access to the `/dev/ttyS0` serial device signals `RXD`, `TXD` and ground. These are 3.3V logic signals and require external level shifters for compatibility with [RS-232 signal](https://en.wikipedia.org/wiki/RS-232) voltage levels. Many 3.3V to USB interface cables are available for purchase from Amazon, eBay, etc.
 
 > [!NOTE]
 > * `RXD` refers to serial data received by (input to) the Pi.
