@@ -18,7 +18,7 @@ The PCB is designed to mount on a RaspBerry Pi Model 2 or later \(with the 40 pi
 
 Two sets of screw terminals are provided:
 * A four-terminal I2C connector with 3.3V power, SDA, SCL, and ground. 
-* A three-terminal 1wire connector with 3.3V power, DQ, and ground.
+* A three-terminal 1 Wire connector with 3.3V power, DQ, and ground.
 
 A 3-pin header connector which provide access to the /dev/ttyS0 is provided.
 
@@ -40,7 +40,7 @@ A full hardware design including [schematic](schematic.pdf) and PCB layout in Ki
   <img src="PCB_rear.jpg" alt="PCB read view"/>
 </p>
 
-For diagnostic purposes, one 3.3V power LED is provided. If the 3.3V power output from the I2C or 1wire interfaces are overloaded or shorted to ground, the 5V to 3.3V LDO regulator will automatically shutdown (and the LED will extinguish). Removing the overload/short will automatically restore the 3.3V power supply.
+For diagnostic purposes, one 3.3V power LED is provided. If the 3.3V power output from the I2C or 1 Wire interfaces are overloaded or shorted to ground, the 5V to 3.3V LDO regulator will automatically shutdown (and the LED will extinguish). Removing the overload/short will automatically restore the 3.3V power supply.
 
 ## Version history
 
