@@ -37,7 +37,7 @@ A 3-pin 0.1 in. spacing header connector provides access to the `/dev/ttyS0` ser
 
 The PCB is designed to mount on any Raspberry Pi Model A+/B+ or later (i.e., any Pi with the 40 pin expansion connecter). While the PCB conforms to the Pi HAT [physical specification](https://github.com/raspberrypi/hats/blob/master/hat-board-mechanical.pdf) there is no EEPROM for full autoconfiguration. As such, this project does not claim 100% compatibility with the Pi HAT specification. 
 
-The schematic and PCB layout were designed using [KiCad 8.0](https://www.kicad.org/). A full hardware design including [schematic](schematic.pdf) and [PCB layout](RPi_RTC_Interface_model.jpg) in KiCad format are provided. If you prefer, the [gerber files](gerbers.zip) can be directly uploaded to most PCB manufacturer sites (avoiding the need to install KiCad).
+The schematic and PCB layout were designed using [KiCad 8.0](https://www.kicad.org/). A full hardware design including [schematic](schematic.pdf) and [PCB layout](RPi_RTC_Interface_model.jpg) in KiCad format are provided. If you prefer, the [gerber files](RPi_RTC_interface_gerbers.zip) can be directly uploaded to most PCB manufacturer sites (avoiding the need to install KiCad).
 
 A Microsoft Excel [bill of materials](RPi_RTC_interface_BOM.xlsx) is also included.
 
