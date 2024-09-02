@@ -33,11 +33,11 @@ A 3-pin header connector with GND, RXD and TXD signals for access to the serial 
 
 ### Hardware Construction and Setup
 
-The PCB is designed to mount on any RaspBerry Pi Model A+/B+ or later (i.e., any Pi with the 40 pin expansion connecter). The schematic and PCB layout were designed using [KiCad 8.0](https://www.kicad.org/).
+The PCB is designed to mount on any RaspBerry Pi Model A+/B+ or later (i.e., any Pi with the 40 pin expansion connecter). While the PCB conforms to the Pi HAT [physical specification](https://github.com/raspberrypi/hats/blob/master/hat-board-mechanical.pdf) there is no EEPROM for full autoconfiguration. As such, this project does not claim 100% compatibility with the Pi HAT specification. 
 
-A full hardware design including [schematic](schematic.pdf) and [PCB layout](RPi_RTC_Interface_model.jpg) in KiCad format are provided. I order my PCBs from [JLCPCB](https://jlcpcb.com/) and parts from [DigiKey](https://digikey.com), but feel free to use your preferred vendors. 
+The schematic and PCB layout were designed using [KiCad 8.0](https://www.kicad.org/). A full hardware design including [schematic](schematic.pdf) and [PCB layout](RPi_RTC_Interface_model.jpg) in KiCad format are provided. I order my PCBs from [JLCPCB](https://jlcpcb.com/) and parts from [DigiKey](https://digikey.com), but feel free to use your preferred vendors. 
 
-Following are unpopulated and populated photos of the front and rear PCB.
+Following are unpopulated and populated photos of the front and rear of the PCB.
 <p align="center">
   <img src="PCB_front.jpg" alt="PCB front view"/>
   <img src="PCB_rear.jpg" alt="PCB read view"/>
