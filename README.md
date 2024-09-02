@@ -5,7 +5,7 @@
 A Raspberry Pi HAT-style interface board that includes a:
 * [DS3231](https://www.analog.com/en/products/ds3231.html) precision real-time clock (RTC) with replaceable battery backup
 * [DS18B20](https://www.analog.com/en/products/ds18b20.html) temperature sensor
-* 3-pin header terminal for access to the serial console (/dev/ttyS0 a.k.a. /dev/serial0) connection
+* 3-pin header terminal for access to the serial console (`/dev/ttyS0` a.k.a. `/dev/serial0`) connection
 * Screw-terminal connection for an [I2C interface](https://en.wikipedia.org/wiki/I%C2%B2C) (supports connecting  external devices such as displays, sensors, D/A and A/D converters, etc.)
 * Screw-terminal connection for a [1-Wire interface](https://en.wikipedia.org/wiki/1-Wire) (supports connecting additional DS18B20 temperature sensors and other 1-Wire compatible devices)
 <p align="center">
@@ -19,13 +19,17 @@ Two sets of screw terminals are provided:
 * A four-terminal I2C connector with 3.3V power, SDA, SCL, and ground. Pull-ups for SDA and SCL are provided.
 * A three-terminal 1-Wire connector with 3.3V power, DQ, and ground. Pull-up for DQ is provided.
 
+For diagnostic purposes, a 3.3V power LED is provided. 
 > [!NOTE]
-> As per the spec for the [onboard 5V to 3.3V LDO](https://www.diodes.com/assets/Datasheets/AP7361EA.pdf), the I2C and 1-Wire interfaces are able to supply up to 1 amp to connected devices. For diagnostic purposes, a 3.3V power LED is provided. If the 3.3V power output from the I2C or 1-Wire interfaces are overloaded or shorted to ground (i.e., current draw exceeds 1.5 amps), the LDO regulator will automatically shutdown (and the LED will extinguish). Removing the overload/short will automatically restore the 3.3V power supply.
+> As per the spec for the [onboard 5V to 3.3V LDO](https://www.diodes.com/assets/Datasheets/AP7361EA.pdf), the I2C and 1-Wire interfaces are able to supply up to 1 amp to power connected devices. If the 3.3V power output from the I2C or 1-Wire interfaces are overloaded or shorted to ground (i.e., current draw exceeds 1.5 amps), the LDO regulator will automatically shutdown (and the LED will extinguish). Removing the overload/short will automatically restore the 3.3V power supply.
 
-A 3-pin header connector for access to the serial /dev/ttyS0 device is provided.
+A 3-pin header connector with GND, RXD and TXD signals for access to the serial `/dev/ttyS0` device is provided. 
+> [!NOTE]
+> * RXD references serial data received by (input to) the Pi.
+> * TXD references serial data sent from (output from) the Pi.
 
 > [!CAUTION]
-> The Raspberry Pi uses non-5V tolerant 3.3V GPIO. This also includes the serial port levels. As such, level shifters are required for EIA232 signal compatibility. Many 3.3V to USB interface cables are available for purchase from Amazon, eBay, etc.
+> **The Raspberry Pi uses non-5V tolerant 3.3V GPIO**. This includes the SDA, SCL, DQ and serial port levels. As such, level shifters are required for EIA232 signal compatibility. Many 3.3V to USB interface cables are available for purchase from Amazon, eBay, etc.
 
 ### Hardware Construction and Setup
 
